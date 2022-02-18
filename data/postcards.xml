@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OldCards
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.itacademy.by/parshin/OldCards"
+        xsi:schemaLocation="http://www.itacademy.by/parshin/OldCards postcards.xsd">
+
+    <sent_postcard postcard_id="GBR708">
+        <theme>Great people quotes</theme>
+        <year>2003</year>
+        <type>Patriotic postcards</type>
+        <country>United Kingdom</country>
+        <valuable>Collectible</valuable>
+        <sent>true</sent>
+        <postal_information>
+            <departure_date>2019-07-22</departure_date>
+            <departure_country>Britain</departure_country>
+            <receiving_country>Russian Federation</receiving_country>
+        </postal_information>
+    </sent_postcard>
+
+    <sent_postcard postcard_id="USA105">
+        <theme>Cityscape</theme>
+        <year>2001</year>
+        <type>Advertising postcards</type>
+        <country>United States</country>
+        <valuable>Thematic</valuable>
+        <sent>true</sent>
+        <postal_information>
+            <departure_date>2001-09-11</departure_date>
+            <departure_country>United Stated</departure_country>
+            <receiving_country>Afghanistan</receiving_country>
+        </postal_information>
+    </sent_postcard>
+
+    <postcard postcard_id="AUS609">
+        <theme>Architecture</theme>
+        <year>2008</year>
+        <type>Photo postcard</type>
+        <country>Australia</country>
+        <valuable>Historical</valuable>
+    </postcard>
+
+    <sent_postcard postcard_id="ITA710">
+        <theme>Great people quotes</theme>
+        <year>2003</year>
+        <type>Business postcard</type>
+        <country>Italy</country>
+        <valuable>Collectible</valuable>
+        <sent>true</sent>
+        <postal_information>
+            <departure_date>1984-06-29</departure_date>
+            <departure_country>Monaco</departure_country>
+            <receiving_country>Germany</receiving_country>
+        </postal_information>
+    </sent_postcard>
+
+    <sent_postcard postcard_id="IND304">
+        <theme>People</theme>
+        <year>2007</year>
+        <type>Artistic postcards</type>
+        <country>India</country>
+        <valuable>Thematic</valuable>
+        <sent>true</sent>
+        <postal_information>
+            <departure_date>2014-02-16</departure_date>
+            <departure_country>Lithuania</departure_country>
+            <receiving_country>Luxembourg</receiving_country>
+        </postal_information>
+    </sent_postcard>
+
+    <postcard postcard_id="EGY01">
+        <theme>Architecture</theme>
+        <year>1906</year>
+        <type>Handmade postcards</type>
+        <country>Egypt</country>
+        <valuable>Collectible</valuable>
+    </postcard>
+
+    <sent_postcard postcard_id="GBR01">
+        <theme>Nature</theme>
+        <year>2003</year>
+        <type>Postcards-reproductions</type>
+        <country>Iceland</country>
+        <valuable>Collectible</valuable>
+        <sent>true</sent>
+        <postal_information>
+            <departure_date>2019-07-22</departure_date>
+            <departure_country>Britain</departure_country>
+            <receiving_country>Moscow</receiving_country>
+        </postal_information>
+    </sent_postcard>
+
+    <sent_postcard postcard_id="PLW110">
+        <theme>Cityscape</theme>
+        <year>2016</year>
+        <type>Photo postcard</type>
+        <country>Palau</country>
+        <valuable>Collectible</valuable>
+        <sent>true</sent>
+        <postal_information>
+            <departure_date>2017-01-02</departure_date>
+            <departure_country>Russian Federation</departure_country>
+            <receiving_country>France</receiving_country>
+        </postal_information>
+    </sent_postcard>
+
+    <postcard postcard_id="JPN610">
+        <theme>Architecture</theme>
+        <year>2009</year>
+        <type>Photo postcard</type>
+        <country>Japan</country>
+        <valuable>Historical</valuable>
+    </postcard>
+
+    <postcard postcard_id="CHN505">
+        <theme>Sport</theme>
+        <year>2020</year>
+        <type>Advertising postcards</type>
+        <country>China</country>
+        <valuable>Collectible</valuable>
+    </postcard>
+
+    <sent_postcard postcard_id="USA307">
+        <theme>People</theme>
+        <year>2016</year>
+        <type>Political postcards</type>
+        <country>United States</country>
+        <valuable>Thematic</valuable>
+        <sent>true</sent>
+        <postal_information>
+            <departure_date>2016-01-25</departure_date>
+            <departure_country>United States</departure_country>
+            <receiving_country>United States</receiving_country>
+        </postal_information>
+    </sent_postcard>
+
+    <postcard postcard_id="ISR402">
+        <theme>Religion</theme>
+        <year>1969</year>
+        <type>A view postcards</type>
+        <country>Israel</country>
+        <valuable>Thematic</valuable>
+    </postcard>
+
+    <sent_postcard postcard_id="RUS204" author="Фёдор Ильич Трофимов">
+        <theme>Nature</theme>
+        <year>1974</year>
+        <type>Artistic postcards</type>
+        <country>United Kingdom</country>
+        <valuable>Collectible</valuable>
+        <sent>true</sent>
+        <postal_information>
+            <departure_date>2021-05-06</departure_date>
+            <departure_country>Russian Federation</departure_country>
+            <receiving_country>Belarus</receiving_country>
+        </postal_information>
+    </sent_postcard>
+
+    <postcard postcard_id="KAZ401">
+        <theme>Religion</theme>
+        <year>2014</year>
+        <type>Greeting Cards</type>
+        <country>Kazakhstan</country>
+        <valuable>Thematic</valuable>
+    </postcard>
+
+    <sent_postcard postcard_id="COM206">
+        <theme>Nature</theme>
+        <year>2003</year>
+        <type>Historical-event postcards</type>
+        <country>Comoros</country>
+        <valuable>Historical</valuable>
+        <sent>true</sent>
+        <postal_information>
+            <departure_date>2018-11-23</departure_date>
+            <departure_country>Argentina</departure_country>
+            <receiving_country>Canada</receiving_country>
+        </postal_information>
+    </sent_postcard>
+
+    <postcard postcard_id="IND409">
+        <theme>Religion</theme>
+        <year>2014</year>
+        <type>Patriotic postcards</type>
+        <country>India</country>
+        <valuable>Thematic</valuable>
+    </postcard>
+
+    <sent_postcard postcard_id="RUS511">
+        <theme>Sport</theme>
+        <year>2014</year>
+        <type>Handmade postcards</type>
+        <country>Russian Federation</country>
+        <valuable>Historical</valuable>
+        <sent>true</sent>
+        <postal_information>
+            <departure_date>2019-07-22</departure_date>
+            <departure_country>Russian Federation</departure_country>
+            <receiving_country>Belarus</receiving_country>
+        </postal_information>
+    </sent_postcard>
+
+    <sent_postcard postcard_id="COK710">
+        <theme>Great people quotes</theme>
+        <year>2011</year>
+        <type>Business postcard</type>
+        <country>Cook Islands</country>
+        <valuable>Historical</valuable>
+        <sent>true</sent>
+        <postal_information>
+            <departure_date>2020-08-14</departure_date>
+            <departure_country>Ecuador</departure_country>
+            <receiving_country>Ukraine</receiving_country>
+        </postal_information>
+    </sent_postcard>
+</OldCards>

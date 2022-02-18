@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+
+        targetNamespace="http://www.itacademy.by/parshin/OldCards"
+        xmlns:tns="http://www.itacademy.by/parshin/OldCards"
+        elementFormDefault="qualified">
+
+    <element name="OldCards">
+        <complexType>
+            <sequence>
+                <element ref="tns:postcard" maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+
+    <element name="postcard" type="tns:postcard"/>
+    <element name="sent_postcard" type="tns:sentPostcard" substitutionGroup="tns:postcard"/>
+
+    <complexType name="postcard">
+        <sequence>
+            <element name="theme" type="string"/>
+            <element name="year" type="gYear"/>
+            <element name="type" type="string"/>
+            <element name="country" type="string"/>
+            <element name="valuable" type="string"/>
+        </sequence>
+        <attribute name="postcard_id" type="tns:postcard_id" use="required"/>
+        <attribute name="author" type="string" use="optional"/>
+    </complexType>
+
+    <complexType name="sentPostcard">
+        <complexContent>
+            <extension base="tns:postcard">
+                <sequence>
+                    <element name="sent" type="boolean" fixed="true"/>
+                    <element name="postal_information" type="tns:postal_information"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <simpleType name="postcard_id">
+        <restriction base="ID">
+            <pattern value="^[[:upper:]]\w{3}\d{3}$"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="theme">
+        <restriction base="string">
+            <enumeration value="Cityscape"/>
+            <enumeration value="Nature"/>
+            <enumeration value="People"/>
+            <enumeration value="Religion"/>
+            <enumeration value="Sport"/>
+            <enumeration value="Architecture"/>
+            <enumeration value="Great people quotes"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="year">
+        <restriction>
+            <minInclusive value="1850"/>
+            <maxInclusive value="2022"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="type">
+        <restriction base="string">
+            <enumeration value="Greeting Cards"/>
+            <enumeration value="A view postcards"/>
+            <enumeration value="Postcards-reproductions"/>
+            <enumeration value="Artistic postcards"/>
+            <enumeration value="Advertising postcards"/>
+            <enumeration value="Historical-event postcards"/>
+            <enumeration value="Political postcards"/>
+            <enumeration value="Patriotic postcards"/>
+            <enumeration value="Photo postcard"/>
+            <enumeration value="Business postcard"/>
+            <enumeration value="Handmade postcards"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="country">
+        <restriction base="string">
+            <pattern value="^[[:upper:]][[:lower:]]+[[:alpha:]]$"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="valuable">
+        <restriction>
+            <enumeration value="Historical"/>
+            <enumeration value="Collectible"/>
+            <enumeration value="Thematic"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="author">
+        <restriction>
+            <pattern value="^[[:upper:]]\.[[:upper:]]\.\s[[:upper:]][[:lower:]]+[[:alpha:]]$"/>
+        </restriction>
+    </simpleType>
+
+
+    <complexType name="postal_information">
+        <sequence>
+            <element name="departure_date" type="date"/>
+            <element name="departure_country" type="string"/>
+            <element name="receiving_country" type="string"/>
+        </sequence>
+    </complexType>
+
+    <simpleType name="departure_country">
+        <restriction base="string">
+            <pattern value="^[[[:upper:]][[:lower:]]+[[:alpha:]]]+$"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="receiving_country">
+        <restriction base="string">
+            <pattern value="^[[[:upper:]][[:lower:]]+[[:alpha:]]]+$"/>
+        </restriction>
+    </simpleType>
+</schema>
