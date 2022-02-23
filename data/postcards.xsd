@@ -14,7 +14,8 @@
     </element>
 
     <element name="postcard" type="tns:postcard"/>
-    <element name="sent_postcard" type="tns:sentPostcard" substitutionGroup="tns:postcard"/>
+    <element name="postcard_in_the_museum" type="tns:postcardInTheMuseum" substitutionGroup="tns:postcard"/>
+    <element name="postcard_in_a_private_collection" type="tns:postcardInPrivateCollection" substitutionGroup="tns:postcard"/>
 
     <complexType name="postcard">
         <sequence>
@@ -28,12 +29,23 @@
         <attribute name="author" type="string" use="optional"/>
     </complexType>
 
-    <complexType name="sentPostcard">
+    <complexType name="postcardInTheMuseum">
         <complexContent>
             <extension base="tns:postcard">
                 <sequence>
-                    <element name="sent" type="boolean" fixed="true"/>
-                    <element name="postal_information" type="tns:postal_information"/>
+                    <element name="museum_name" type="string"/>
+                    <element name="museum_location" type="string"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="postcardInPrivateCollection">
+        <complexContent>
+            <extension base="tns:postcard">
+                <sequence>
+                    <element name="collectors_name" type="string"/>
+                    <element name="collection_location" type="string"/>
                 </sequence>
             </extension>
         </complexContent>
@@ -100,22 +112,13 @@
         </restriction>
     </simpleType>
 
-
-    <complexType name="postal_information">
-        <sequence>
-            <element name="departure_date" type="date"/>
-            <element name="departure_country" type="string"/>
-            <element name="receiving_country" type="string"/>
-        </sequence>
-    </complexType>
-
-    <simpleType name="departure_country">
+    <simpleType name="museum_location">
         <restriction base="string">
             <pattern value="^[[[:upper:]][[:lower:]]+[[:alpha:]]]+$"/>
         </restriction>
     </simpleType>
 
-    <simpleType name="receiving_country">
+    <simpleType name="collection_location">
         <restriction base="string">
             <pattern value="^[[[:upper:]][[:lower:]]+[[:alpha:]]]+$"/>
         </restriction>
