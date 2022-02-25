@@ -83,7 +83,7 @@ public class StaxPostcardBuilder{
 
     private void getStartElement(XMLStreamReader reader, AbstractPostcard postcard) throws XMLStreamException, CustomException {
         String name = reader.getLocalName().toUpperCase(Locale.ROOT);
-        String data = getTextFromXmlReader(reader);
+        String data = getTextFromReader(reader);
         switch (PostcardXmlTag.valueOf(name)) {
             case THEME -> postcard.setTheme(data);
             case YEAR -> postcard.setYear(Year.parse(data));
@@ -113,7 +113,7 @@ public class StaxPostcardBuilder{
         }
     }
 
-    private String getTextFromXmlReader(XMLStreamReader reader) throws XMLStreamException {
+    private String getTextFromReader(XMLStreamReader reader) throws XMLStreamException {
         String text = null;
         if (reader.hasNext()) {
             reader.next();
