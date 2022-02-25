@@ -11,21 +11,20 @@ public class PostcardErrorHandler implements ErrorHandler {
     private static final Logger log = LogManager.getLogger();
 
     public void warning(SAXParseException e) {
-        log.log(Level.WARN,"{} - {}",getLineColumnNumber(e), e.getMessage());
+        log.log(Level.WARN,"{} - {}", getLineColumn(e), e.getMessage());
     }
 
     @Override
     public void error(SAXParseException e) {
-        log.log(Level.ERROR,"{} - {}",getLineColumnNumber(e), e.getMessage());
+        log.log(Level.ERROR,"{} - {}", getLineColumn(e), e.getMessage());
     }
 
     @Override
     public void fatalError(SAXParseException e) throws SAXException {
-        log.log(Level.FATAL,"{} - {}",getLineColumnNumber(e), e.getMessage());
+        log.log(Level.FATAL,"{} - {}", getLineColumn(e), e.getMessage());
     }
 
-    private String getLineColumnNumber(SAXParseException e) {
-        // determine line and position of error
+    private String getLineColumn(SAXParseException e) {
         return e.getLineNumber() + " : " + e.getColumnNumber();
     }
 }

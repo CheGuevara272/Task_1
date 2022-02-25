@@ -1,7 +1,6 @@
 package com.parshin.postcard.builder;
 
 public enum PostcardXmlTag {
-    OLD_CARDS("OldCards"),
     POSTCARD_ID("postcard_id"),
     AUTHOR("author"),
     AUTHOR_BY_DEFAULT("author"),

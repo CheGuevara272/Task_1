@@ -48,11 +48,11 @@ public class StaxPostcardBuilder{
                 }
             }
         } catch (FileNotFoundException e) {
-            log.log(Level.ERROR, "File {} not found", file, e);
+            log.log(Level.ERROR, "File {} had not been found", file, e);
         } catch (IOException e) {
-            log.log(Level.ERROR, "File {} can't be read", file, e);
+            log.log(Level.ERROR, "File {} can not be read", file, e);
         } catch (XMLStreamException e) {
-            log.log(Level.ERROR, "File {} can't be parsed", file, e);
+            log.log(Level.ERROR, "File {} can not be parsed", file, e);
         }
     }
 
@@ -77,8 +77,8 @@ public class StaxPostcardBuilder{
                 }
             }
         }
-        log.log(Level.ERROR, "Parsing error. Unknown element in xml file");
-        throw new CustomException("Parsing error. Unknown element in xml file ");
+        log.log(Level.ERROR, "Parsing error. Element is unknown");
+        throw new CustomException("Parsing error. Element is unknown");
     }
 
     private void getStartElement(XMLStreamReader reader, AbstractPostcard postcard) throws XMLStreamException, CustomException {
@@ -107,8 +107,8 @@ public class StaxPostcardBuilder{
                 postcardInCollection.setCollectionLocation(data);
             }
             default -> {
-                log.log(Level.ERROR, "Unsupported tag: {}", name);
-                throw new CustomException("Unsupported tag: " + name);
+                log.log(Level.ERROR, "Unknown tag: {}", name);
+                throw new CustomException("Unknown tag: " + name);
             }
         }
     }

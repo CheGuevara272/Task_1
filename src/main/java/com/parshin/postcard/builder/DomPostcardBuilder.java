@@ -61,11 +61,11 @@ public class DomPostcardBuilder{
                 postcardSet.add(postcard);
             }
         } catch (SAXException exception) {
-            log.log(Level.ERROR, "File was not parsed!", exception);
+            log.log(Level.ERROR, "File had not been parsed!", exception);
         } catch (IOException exception) {
-            log.log(Level.ERROR, "File was not read!", exception);
+            log.log(Level.ERROR, "File had not been read!", exception);
         } catch (ParserConfigurationException exception) {
-            log.log(Level.ERROR, "File was not parsed!", exception);
+            log.log(Level.ERROR, "File had not been parsed!", exception);
             exception.printStackTrace();
         }
     }
