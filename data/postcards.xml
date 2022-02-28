@@ -14,7 +14,7 @@
         <museum_location>Paris</museum_location>
     </postcard_in_the_museum>
 
-    <postcard_in_the_museum postcard_id="USA105">
+    <postcard_in_the_museum author="Dima" postcard_id="USA105">
         <theme>Cityscape</theme>
         <year>2001</year>
         <type>Advertising postcards</type>
@@ -24,7 +24,7 @@
         <museum_location>Paris</museum_location>
     </postcard_in_the_museum>
 
-    <postcard_in_a_private_collection postcard_id="AUS609">
+    <postcard_in_a_private_collection postcard_id="AUS609" author="Valera">
         <theme>Architecture</theme>
         <year>2008</year>
         <type>Photo postcard</type>

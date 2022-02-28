@@ -49,8 +49,9 @@ public class PostcardInMuseum extends AbstractPostcard {
     @Override
     public String toString() {
         return new StringJoiner(", ", PostcardInMuseum.class.getSimpleName() + "[", "]")
-                .add("museumName='" + museumName + "'")
-                .add("museumLocation='" + museumLocation + "'")
+                .add(super.toString())
+                .add("Museum Name='" + museumName + "'")
+                .add("Museum Location='" + museumLocation + "'")
                 .toString();
     }
 }

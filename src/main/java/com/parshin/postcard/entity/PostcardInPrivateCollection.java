@@ -49,8 +49,9 @@ public class PostcardInPrivateCollection extends AbstractPostcard {
     @Override
     public String toString() {
         return new StringJoiner(", ", PostcardInPrivateCollection.class.getSimpleName() + "[", "]")
-                .add("collectorsName='" + collectorsName + "'")
-                .add("collectionLocation='" + collectionLocation + "'")
+                .add(super.toString())
+                .add("Collectors Name='" + collectorsName + "'")
+                .add("Collection Location='" + collectionLocation + "'")
                 .toString();
     }
 }

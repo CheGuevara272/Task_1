@@ -50,6 +50,7 @@ public class DomPostcardBuilder{
                 if (node.getNodeType() == Node.ELEMENT_NODE) {
                     Element postcardElement = (Element) node;
                     AbstractPostcard postcard = buildPostcards(postcardElement);
+                    log.log(Level.INFO, postcard.toString());
                     postcardSet.add(postcard);
                 }
             }
@@ -58,15 +59,16 @@ public class DomPostcardBuilder{
             for (int i = 0; i < postcardList.getLength(); i++) {
                 Element postcardElement = (Element) postcardList.item(i);
                 AbstractPostcard postcard = buildPostcards(postcardElement);
+                log.log(Level.INFO, postcard.toString());
                 postcardSet.add(postcard);
             }
-        } catch (SAXException exception) {
-            log.log(Level.ERROR, "File had not been parsed!", exception);
-        } catch (IOException exception) {
-            log.log(Level.ERROR, "File had not been read!", exception);
-        } catch (ParserConfigurationException exception) {
-            log.log(Level.ERROR, "File had not been parsed!", exception);
-            exception.printStackTrace();
+        } catch (SAXException e) {
+            log.log(Level.ERROR, "File had not been parsed!", e);
+        } catch (IOException e) {
+            log.log(Level.ERROR, "File had not been read!", e);
+        } catch (ParserConfigurationException e) {
+            log.log(Level.ERROR, "File had not been parsed!", e);
+            e.printStackTrace();
         }
     }
 
@@ -86,7 +88,7 @@ public class DomPostcardBuilder{
         data = getElementTextContent(element, COUNTRY.getValue());
         postcard.setCountry(data);
         data = getElementTextContent(element, VALUABLE.getValue());
-        postcard.setCountry(data);
+        postcard.setValuable(data);
 
         if (postcard instanceof PostcardInMuseum postcardInMuseum) {
             data = getElementTextContent(element, MUSEUM_NAME.getValue());

@@ -3,6 +3,7 @@ package com.parshin.postcard.builder;
 import com.parshin.postcard.entity.AbstractPostcard;
 import com.parshin.postcard.handler.PostcardErrorHandler;
 import com.parshin.postcard.handler.PostcardHandler;
+import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.xml.sax.SAXException;

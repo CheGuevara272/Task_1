@@ -102,14 +102,14 @@ public class AbstractPostcard {
 
     @Override
     public String toString() {
-        return new StringJoiner(", ", AbstractPostcard.class.getSimpleName() + "[", "]")
-                .add("postcardId='" + postcardId + "'")
-                .add("author='" + author + "'")
-                .add("theme='" + theme + "'")
-                .add("year=" + year)
-                .add("type='" + type + "'")
-                .add("country='" + country + "'")
-                .add("valuable='" + valuable + "'")
+        return new StringJoiner(", ")
+                .add("Postcard-Id='" + postcardId + "'")
+                .add("Author='" + author + "'")
+                .add("Theme='" + theme + "'")
+                .add("Year=" + year)
+                .add("Type='" + type + "'")
+                .add("Country='" + country + "'")
+                .add("Valuable='" + valuable + "'")
                 .toString();
     }
 }

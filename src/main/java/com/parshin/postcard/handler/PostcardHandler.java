@@ -4,29 +4,31 @@ import com.parshin.postcard.builder.PostcardXmlTag;
 import com.parshin.postcard.entity.AbstractPostcard;
 import com.parshin.postcard.entity.PostcardInMuseum;
 import com.parshin.postcard.entity.PostcardInPrivateCollection;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.xml.sax.Attributes;
 import org.xml.sax.helpers.DefaultHandler;
+import org.apache.logging.log4j.Level;
 
 import java.time.Year;
 import java.util.EnumSet;
 import java.util.HashSet;
+import java.util.Locale;
 import java.util.Set;
 
 import static com.parshin.postcard.builder.PostcardXmlTag.*;
 
 public class PostcardHandler extends DefaultHandler {
-    private static final char UNDERSCORE = '_';
-    private static final char HYPHEN = '-';
-
+    private static final Logger log = LogManager.getLogger();
+    private EnumSet<PostcardXmlTag> postcardXmlTagEnumSet;
     private Set<AbstractPostcard> postcards;
-    private EnumSet<PostcardXmlTag> enumPostcardSet;
     private AbstractPostcard postcard;
     private PostcardXmlTag postcardXmlTag;
 
 
     public PostcardHandler() {
         postcards = new HashSet<>();
-        enumPostcardSet = EnumSet.range(THEME, COLLECTION_LOCATION);
+        postcardXmlTagEnumSet = EnumSet.range(THEME, COLLECTION_LOCATION);
     }
 
     @Override
@@ -38,6 +40,11 @@ public class PostcardHandler extends DefaultHandler {
             postcard.setPostcardId(attributes.getValue(POSTCARD_ID.getValue()));
             String optionalAuthor = attributes.getValue(AUTHOR.getValue());
             postcard.setAuthor(optionalAuthor == null ? AUTHOR_BY_DEFAULT.getValue() : optionalAuthor);
+        } else {
+            PostcardXmlTag temp = PostcardXmlTag.valueOf(qName.toUpperCase());
+            if (postcardXmlTagEnumSet.contains(temp)) {
+                postcardXmlTag = temp;
+            }
         }
     }
 
@@ -77,6 +84,7 @@ public class PostcardHandler extends DefaultHandler {
         String unlimitedTariffTag = POSTCARD_IN_THE_MUSEUM.getValue();
         String limitedTariffTag = POSTCARD_IN_A_PRIVATE_COLLECTION.getValue();
         if (unlimitedTariffTag.equals(qName) || limitedTariffTag.equals(qName)) {
+            log.log(Level.INFO, postcard.toString());
             postcards.add(postcard);
         }
     }

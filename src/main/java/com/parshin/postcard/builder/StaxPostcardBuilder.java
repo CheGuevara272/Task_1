@@ -43,6 +43,7 @@ public class StaxPostcardBuilder{
                     name = reader.getLocalName();
                     if (name.equals(POSTCARD_IN_THE_MUSEUM.getValue()) || name.equals(POSTCARD_IN_A_PRIVATE_COLLECTION.getValue())) {
                         AbstractPostcard postcard = buildPostcard(reader);
+                        log.log(Level.INFO, postcard.toString());
                         postcardSet.add(postcard);
                     }
                 }

@@ -1,9 +1,10 @@
 package com.parshin.postcard.builder;
 
 public enum PostcardXmlTag {
+    OLDCARDS("OldCards"),
     POSTCARD_ID("postcard_id"),
     AUTHOR("author"),
-    AUTHOR_BY_DEFAULT("author"),
+    AUTHOR_BY_DEFAULT("Author is unknown"),
     THEME("theme"),
     YEAR("year"),
     TYPE("type"),
